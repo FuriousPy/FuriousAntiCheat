@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <OutputType>Library</OutputType>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>FuriousAntiCheat</AssemblyName>
+    <RootNamespace>FuriousAntiCheat</RootNamespace>
+    <Version>2.3.2</Version>
+    <OutputPath>bin/Release/net48/</OutputPath>
+    <GeneratePathProperty>true</GeneratePathProperty>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <ValheimLibPath Condition="'$(ValheimLibPath)' == ''">D:\SteamLibrary\steamapps\common\Valheim</ValheimLibPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="BepInEx" HintPath="$(ValheimLibPath)/BepInEx/core/BepInEx.dll" Private="false" />
+    <Reference Include="BepInEx.Harmony" HintPath="$(ValheimLibPath)/BepInEx/core/BepInEx.Harmony.dll" Private="false" />
+    <Reference Include="0Harmony" HintPath="$(ValheimLibPath)/BepInEx/core/0Harmony20.dll" Private="false" />
+    <Reference Include="Mono.Cecil" HintPath="$(ValheimLibPath)/BepInEx/core/Mono.Cecil.dll" Private="false" />
+    <Reference Include="UnityEngine" HintPath="$(ValheimLibPath)/Valheim_Data/Managed/UnityEngine.dll" Private="false" />
+    <Reference Include="UnityEngine.CoreModule" HintPath="$(ValheimLibPath)/Valheim_Data/Managed/UnityEngine.CoreModule.dll" Private="false" />
+    <Reference Include="assembly_valheim" HintPath="$(ValheimLibPath)/Valheim_Data/Managed/assembly_valheim.dll" Private="false" />
+    <Reference Include="assembly_utils" HintPath="$(ValheimLibPath)/Valheim_Data/Managed/assembly_utils.dll" Private="false" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+</Project>
